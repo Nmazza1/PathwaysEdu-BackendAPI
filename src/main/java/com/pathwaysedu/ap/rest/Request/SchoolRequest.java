@@ -14,4 +14,10 @@ public class SchoolRequest {
     //@NotBlank
     private String region;
 
+    private String district;
+
+    private String country;
+
+    private Boolean college;
+
 }

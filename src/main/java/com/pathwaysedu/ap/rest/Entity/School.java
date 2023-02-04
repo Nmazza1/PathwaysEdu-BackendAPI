@@ -25,10 +25,22 @@ public class School {
     @Column(name = "region", nullable = false)
     private String region;
 
+    @Column(name = "district", nullable = false)
+    private String district;
+
+    @Column(name = "country", nullable = false)
+    private String country;
+
+    @Column(name = "college", nullable = false)
+    private boolean college;
+
     public School(SchoolRequest schoolRequest){
         schoolName = schoolRequest.getSchoolName();
         schoolImgUrl = schoolRequest.getSchoolImgUrl();
         region = schoolRequest.getRegion();
+        district = schoolRequest.getDistrict();
+        country = schoolRequest.getCountry();
+        college = schoolRequest.getCollege();
     }
 
 

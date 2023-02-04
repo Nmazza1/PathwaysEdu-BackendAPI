@@ -18,8 +18,11 @@ public class CourseService {
             return courseRepository.findAllBySchool_IdAndPrerequisiteAndSchool_Region(school_id, prerequisite, region );
     }
 
-    public List<Course> getAllCourses(Integer prerequisite, String region){
-            return courseRepository.findAllByPrerequisiteAndSchool_Region(prerequisite, region);
+    public List<Course> getAllCourses(Integer prerequisite,Boolean college,String country,
+                                      String region, String district){
+            return courseRepository.findAllByPrerequisiteAndSchool_CollegeAndSchool_CountryAndSchool_RegionAndSchool_District
+                    (prerequisite, college,
+                    country, region, district);
     }
 /*
     public Course insertCourse(CourseRequest courseRequest){

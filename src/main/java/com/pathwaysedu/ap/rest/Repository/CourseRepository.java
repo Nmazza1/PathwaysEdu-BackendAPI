@@ -20,15 +20,22 @@ public interface CourseRepository extends CrudRepository<Course, Long>, QueryByE
     @Query(value =
             "SELECT railway.course.course_name, school.id as idschool, course.id,\n" +
                     "                   prerequisite, course_link, school.school_name,\n" +
-                    "                   school.region\n" +
+                    "                   school.region, school.college, school.country," +
+                    "school.district\n" +
                     "            FROM railway.course\n" +
                     "         INNER JOIN school ON railway.course.idschool = school.id\n" +
                     "WHERE prerequisite = ~ (:prereq ^ course.prerequisite) & :prereq\n" +
-                    "  AND school.region = :region"
+                    "AND school.region = :region\n" +
+                    "AND school.college = :college\n" +
+                    "AND school.country = :country\n" +
+                    "AND school.district = :district"
             , nativeQuery = true)
 
 
-    List<Course> findAllByPrerequisiteAndSchool_Region(@Param("prereq") Integer prereq, @Param("region") String region);
+    List<Course> findAllByPrerequisiteAndSchool_CollegeAndSchool_CountryAndSchool_RegionAndSchool_District
+            (@Param("prereq") Integer prereq, @Param("college") Boolean college,
+             @Param("country") String country,@Param("region") String region,
+             @Param("district") String District);
 
 
     @Query(value = "SELECT railway.course.course_name, school.id as idschool, course.id,\n" +

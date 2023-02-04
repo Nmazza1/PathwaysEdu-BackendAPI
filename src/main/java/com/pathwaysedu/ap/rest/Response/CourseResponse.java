@@ -16,6 +16,8 @@ public class CourseResponse {
 
     private Integer prerequisite;
 
+    private String description;
+
     private SchoolResponse school;
 
     public CourseResponse(Course course){
@@ -24,6 +26,7 @@ public class CourseResponse {
         courseLink = course.getCourseLink();
         school = new SchoolResponse(course.getSchool());
         prerequisite = course.getPrerequisite();
+        description = course.getDescription();
 
     }
 

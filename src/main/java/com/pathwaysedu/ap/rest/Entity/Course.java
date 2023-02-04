@@ -34,10 +34,13 @@ public class Course {
     @Column(name = "prerequisite")
     private Integer prerequisite;
 
+    private String description;
+
     public Course(CourseRequest courseRequest) {
         courseName = courseRequest.getCourseName();
         courseLink = courseRequest.getCourseLink();
         prerequisite = courseRequest.getPrerequisite();
+        description = courseRequest.getDescription();
 
     }
 }

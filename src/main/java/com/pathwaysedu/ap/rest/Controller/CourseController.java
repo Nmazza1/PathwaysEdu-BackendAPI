@@ -19,9 +19,14 @@ public class CourseController {
     CourseService courseService;
 
     @GetMapping()
-    public List<CourseResponse> getAllCourses(@RequestParam(required = true)Integer prereq, @RequestParam(required = true)String region){
+    public List<CourseResponse> getAllCourses(@RequestParam(required = true)Integer prereq,
+                                              @RequestParam(required = true)Boolean college,
+                                              @RequestParam(required = true)String country,
+                                              @RequestParam(required = true)String region,
+                                              @RequestParam(required = true)String district
+                                              ){
 
-        List<Course> courses = courseService.getAllCourses(prereq, region);
+        List<Course> courses = courseService.getAllCourses(prereq, college, country, region, district);
         List<CourseResponse> courseResponse = new ArrayList<>();
 
         courses.forEach(course -> {

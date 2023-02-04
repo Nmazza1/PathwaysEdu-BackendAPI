@@ -16,4 +16,6 @@ public class CourseRequest {
 
     //@NotNull
     private Integer prerequisite;
+
+    private String description;
 }
