@@ -12,11 +12,20 @@ public class SchoolResponse {
     private String schoolImgUrl;
     private String region;
 
+    private String district;
+
+    private String country;
+
+    private Integer college;
+
     public SchoolResponse(School school){
         id = school.getId();
         schoolName = school.getSchoolName();
         schoolImgUrl = school.getSchoolImgUrl();
         region = school.getRegion();
+        district = school.getDistrict();
+        country = school.getCountry();
+        college = school.getCollege();
     }
 
 }

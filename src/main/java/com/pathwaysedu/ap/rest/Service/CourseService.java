@@ -18,7 +18,7 @@ public class CourseService {
             return courseRepository.findAllBySchool_IdAndPrerequisiteAndSchool_Region(school_id, prerequisite, region );
     }
 
-    public List<Course> getAllCourses(Integer prerequisite,Boolean college,String country,
+    public List<Course> getAllCourses(Integer prerequisite,Integer college,String country,
                                       String region, String district){
             return courseRepository.findAllByPrerequisiteAndSchool_CollegeAndSchool_CountryAndSchool_RegionAndSchool_District
                     (prerequisite, college,

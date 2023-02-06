@@ -32,7 +32,7 @@ public class School {
     private String country;
 
     @Column(name = "college", nullable = false)
-    private boolean college;
+    private Integer college;
 
     public School(SchoolRequest schoolRequest){
         schoolName = schoolRequest.getSchoolName();

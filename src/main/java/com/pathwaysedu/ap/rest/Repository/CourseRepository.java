@@ -33,7 +33,7 @@ public interface CourseRepository extends CrudRepository<Course, Long>, QueryByE
 
 
     List<Course> findAllByPrerequisiteAndSchool_CollegeAndSchool_CountryAndSchool_RegionAndSchool_District
-            (@Param("prereq") Integer prereq, @Param("college") Boolean college,
+            (@Param("prereq") Integer prereq, @Param("college") Integer college,
              @Param("country") String country,@Param("region") String region,
              @Param("district") String District);
 

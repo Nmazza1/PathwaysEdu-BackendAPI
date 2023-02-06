@@ -18,6 +18,6 @@ public class SchoolRequest {
 
     private String country;
 
-    private Boolean college;
+    private Integer college;
 
 }
