@@ -21,7 +21,7 @@ public interface CourseRepository extends CrudRepository<Course, Long>, QueryByE
             "SELECT railway.course.course_name, school.id as idschool, course.id,\n" +
                     "                   prerequisite, course_link, school.school_name,\n" +
                     "                   school.region, school.college, school.country," +
-                    "school.district\n" +
+                    "school.district, course.description\n" +
                     "            FROM railway.course\n" +
                     "         INNER JOIN school ON railway.course.idschool = school.id\n" +
                     "WHERE prerequisite = ~ (:prereq ^ course.prerequisite) & :prereq\n" +
