@@ -20,7 +20,7 @@ public class CourseController {
 
     @GetMapping()
     public List<CourseResponse> getAllCourses(@RequestParam(required = true)Integer prereq,
-                                              @RequestParam(required = true)Integer college,
+                                              @RequestParam(required = true)Long college,
                                               @RequestParam(required = true)String country,
                                               @RequestParam(required = true)String region,
                                               @RequestParam(required = true)String district

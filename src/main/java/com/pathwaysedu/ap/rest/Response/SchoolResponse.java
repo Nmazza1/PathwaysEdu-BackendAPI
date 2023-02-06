@@ -16,7 +16,7 @@ public class SchoolResponse {
 
     private String country;
 
-    private Integer college;
+    private long college;
 
     public SchoolResponse(School school){
         id = school.getId();

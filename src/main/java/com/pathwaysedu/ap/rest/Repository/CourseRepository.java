@@ -30,10 +30,8 @@ public interface CourseRepository extends CrudRepository<Course, Long>, QueryByE
                     "AND school.country = :country\n" +
                     "AND school.district = :district"
             , nativeQuery = true)
-
-
     List<Course> findAllByPrerequisiteAndSchool_CollegeAndSchool_CountryAndSchool_RegionAndSchool_District
-            (@Param("prereq") Integer prereq, @Param("college") Integer college,
+            (@Param("prereq") Integer prereq, @Param("college") Long college,
              @Param("country") String country,@Param("region") String region,
              @Param("district") String District);
 
