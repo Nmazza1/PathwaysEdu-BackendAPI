@@ -18,4 +18,8 @@ public class CourseRequest {
     private Integer prerequisite;
 
     private String description;
+
+    private String programLength;
+
+    private String schoolLink;
 }

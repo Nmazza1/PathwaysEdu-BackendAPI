@@ -34,6 +34,8 @@ public class School {
     @Column(name = "college", nullable = false)
     private long college;
 
+    private String language;
+
     public School(SchoolRequest schoolRequest){
         schoolName = schoolRequest.getSchoolName();
         schoolImgUrl = schoolRequest.getSchoolImgUrl();
@@ -41,6 +43,7 @@ public class School {
         district = schoolRequest.getDistrict();
         country = schoolRequest.getCountry();
         college = schoolRequest.getCollege();
+        language = schoolRequest.getLanguage();
     }
 
 

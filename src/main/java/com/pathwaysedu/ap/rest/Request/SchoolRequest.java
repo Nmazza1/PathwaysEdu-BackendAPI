@@ -20,4 +20,5 @@ public class SchoolRequest {
 
     private Long college;
 
+    private String language;
 }

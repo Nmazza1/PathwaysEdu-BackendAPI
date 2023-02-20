@@ -24,6 +24,9 @@ public class Course {
     @Column(name = "course_link")
     private String courseLink;
 
+    @Column(name = "school_link")
+    private String schoolLink;
+
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -36,11 +39,16 @@ public class Course {
 
     private String description;
 
+    @Column(name = "program_length")
+    private String programLength;
+
     public Course(CourseRequest courseRequest) {
         courseName = courseRequest.getCourseName();
         courseLink = courseRequest.getCourseLink();
         prerequisite = courseRequest.getPrerequisite();
         description = courseRequest.getDescription();
+        programLength = courseRequest.getProgramLength();
+        schoolLink = courseRequest.getSchoolLink();
 
     }
 }
