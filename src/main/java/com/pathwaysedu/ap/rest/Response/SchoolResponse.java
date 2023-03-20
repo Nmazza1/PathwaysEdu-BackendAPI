@@ -18,6 +18,10 @@ public class SchoolResponse {
 
     private long college;
 
+    private String language;
+
+    private String schoolLink;
+
     public SchoolResponse(School school){
         id = school.getId();
         schoolName = school.getSchoolName();
@@ -26,6 +30,9 @@ public class SchoolResponse {
         district = school.getDistrict();
         country = school.getCountry();
         college = school.getCollege();
+        language = school.getLanguage();
+        schoolLink = school.getSchoolLink();
+
     }
 
 }

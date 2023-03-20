@@ -24,10 +24,6 @@ public class Course {
     @Column(name = "course_link")
     private String courseLink;
 
-    @Column(name = "school_link")
-    private String schoolLink;
-
-
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "idschool")
@@ -48,7 +44,6 @@ public class Course {
         prerequisite = courseRequest.getPrerequisite();
         description = courseRequest.getDescription();
         programLength = courseRequest.getProgramLength();
-        schoolLink = courseRequest.getSchoolLink();
 
     }
 }

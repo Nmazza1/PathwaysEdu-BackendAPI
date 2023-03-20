@@ -36,6 +36,9 @@ public class School {
 
     private String language;
 
+    @Column(name = "school_link")
+    private String schoolLink;
+
     public School(SchoolRequest schoolRequest){
         schoolName = schoolRequest.getSchoolName();
         schoolImgUrl = schoolRequest.getSchoolImgUrl();
