@@ -34,12 +34,10 @@ public class Course {
     @Column(name = "prerequisite")
     private Integer prerequisite;
 
-    @Column(name="description")
-    @Lob
+    @Column(name="description" , length = 65535, columnDefinition="TEXT")
     private String description;
 
     @Column(name = "program_length")
-
     private String programLength;
 
     public Course(CourseRequest courseRequest) {
